@@ -1,5 +1,10 @@
 .a{
-    @apply w-[5rem] h-[5rem] p-3 rounded-[50%] flex items-center flex-col bg-gradient-to-r from-[#494949] to-[#313131];
+    @apply 
+    w-[5rem] 
+    h-[5rem] 
+    p-3 rounded-[50%] 
+    flex items-center 
+    flex-col bg-gradient-to-r from-[#494949] to-[#313131];
 
     &.active{
         @apply bg-gradient-to-r from-[#f27121] active:to-[#e29057]
