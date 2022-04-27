@@ -27,7 +27,7 @@ export const Vaggie = () => {
     }
     return (
         <div>
-            <h3>Veggie</h3>
+            <h3 className='my-5 text-center text-2xl'>Veggie</h3>
             <Splide 
                 options={{
                     perPage:3,

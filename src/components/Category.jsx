@@ -2,7 +2,6 @@ import React from 'react'
 import { FaPizzaSlice, FaHamburger } from 'react-icons/fa';
 import { GiNoodles, GiChopsticks } from 'react-icons/gi';
 import { NavLink } from 'react-router-dom';
-import './Category.scss'
 
 const nav = [
     {
@@ -32,7 +31,7 @@ export const Category = () => {
         <header className='flex justify-around'>
             {nav.map((category, index) => {
                 return(
-                    <NavLink to={category.path} key={`${category.name}__${index}`} className='a'>
+                    <NavLink to={category.path} key={`${category.name}__${index}`} className='category'>
                         <category.icon className='text-white' />
                         <p className='text-center top-[35%] text-white'>{category.name}</p>
                     </NavLink>

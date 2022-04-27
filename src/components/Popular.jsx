@@ -26,7 +26,7 @@ export const Popular = () => {
     }
     return (
         <div>
-            <h3>Popular</h3>
+            <h3 className='my-5 text-center text-2xl'>Popular</h3>
             <Splide 
                 options={{
                     perPage:4,
