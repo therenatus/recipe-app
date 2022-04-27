@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 
@@ -34,16 +36,31 @@ export const Vaggie = () => {
                     arrows: false,
                     pagination: false,
                     drag: 'free',
-                    gap: '8rem'
+                    gap: '8rem',
+                    breakpoints: {
+                        1200: {
+                          gap: '3rem'
+                        },
+                        768: {
+                            gap: '1.5rem'
+                        }
+                        
+                    }
                 }}>
-                {vaggie.map((el, index) => {
+                {vaggie.map((item, index) => {
                     return(
                         <SplideSlide key={index}>
-                            <div className='relative h-[20rem]'>
-                                <p className='absolute text-white z-20 text-center bottom-10 w-[90%] left-[5%] font-bold text-lg'>{el.title}</p>
-                                <img  className='rounded-xl absolute h-full z-10 object-center' src={el.image} alt={el.title} />
-                                <div className='rounded-xl absolute bg-black z-10 w-full h-full opacity-20'></div>
-                            </div>
+                            <Link to={`/recipe/${item.id}`} key={`${index}__${item.title}`}>
+                                <motion.div className='relative h-[10rem] md:h-[20rem]'
+                                    whileHover={{
+                                        scale: 1.1,
+                                        transition: { duration: 0.4 },
+                                    }}>
+                                    <p className='absolute text-white z-20 text-center bottom-1.5 w-[90%] left-[5%] font-bold text-xs md:text-sm lg:text-lg'>{item.title}</p>
+                                    <img  className='rounded-xl absolute h-full z-10 object-cover' src={item.image} alt={item.title} />
+                                    <div className='rounded-xl absolute bg-black z-10 w-full h-full opacity-20'></div>
+                                </motion.div>
+                            </Link> 
                         </SplideSlide>
                     )
                 })}

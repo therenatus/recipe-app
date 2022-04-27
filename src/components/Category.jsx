@@ -1,6 +1,6 @@
 import React from 'react'
-import { FaPizzaSlice, FaHamburger } from 'react-icons/fa';
-import { GiNoodles, GiChopsticks } from 'react-icons/gi';
+import { FaPizzaSlice, FaHamburger, FaCheese } from 'react-icons/fa';
+import { GiNoodles } from 'react-icons/gi';
 import { NavLink } from 'react-router-dom';
 
 const nav = [
@@ -15,9 +15,9 @@ const nav = [
         path: '/cuisine/American'
     },
     {
-        name: 'Japanase',
-        icon: GiChopsticks,
-        path: '/cuisine/Japanase'
+        name: 'French',
+        icon: FaCheese,
+        path: '/cuisine/French'
     },
     {
         name: 'Korean',

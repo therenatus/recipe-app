@@ -36,8 +36,7 @@ export const Cuisine = () => {
                             <img src={item.image} alt={item.title} className='rounded-lg' />
                             <p>{item.title}</p>
                           </motion.div>
-                    </Link>
-                    
+                    </Link>   
                 )
             })}
         </motion.div>
